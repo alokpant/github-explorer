@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple project to list 30 Github Public repositories. Stack that were used are:
+- Rails
+- TailwindCSS for Frontend
+- Minitest for Testing
 
-Things you may want to cover:
+To run the project:
 
-* Ruby version
+Install dependencies:
+```
+bundle install
+```
 
-* System dependencies
+```
+./bin/dev
+```
 
-* Configuration
+To run tests:
+```
+bin/rails test
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Limitation:
+- It only return 30 repositories even if there are more than 30. No pagination is implemented yet.
+- Sorting based on stargazers or watchers is also not possible as the field sort is [deprecated](https://docs.github.com/en/free-pro-team@latest/rest/search/search?apiVersion=2022-11-28#search-code)
