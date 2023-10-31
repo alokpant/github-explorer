@@ -2,8 +2,7 @@
 
 # Repositories controller to allow users to search for Github Repositories
 class RepositoriesController < ApplicationController
-  def index
-  end
+  def index; end
 
   def search
     search_term = params[:search_term]

@@ -2,8 +2,7 @@
 
 # Simple GithubApi Service to fetch repositories
 class GithubApi
-  def initialize
-  end
+  def initialize; end
 
   def search_repositories(query)
     Octokit.search_repositories(query)
