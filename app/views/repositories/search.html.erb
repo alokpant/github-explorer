@@ -1,26 +1,5 @@
 <main class="bg-white dark:bg-gray-900 container mx-auto min-h-screen">
-  <header class="px-6 pt-28 text-center">
-      <div class="mx-auto max-w-lg">
-        <h1 class="text-3xl font-bold text-gray-800 dark:text-white md:text-4xl">GitHub Repo Explorer</h1>
-        <p class="mt-6 text-gray-500 dark:text-gray-300">Explore GitHub Like Never Before!</p>
-        <div
-          class="mx-auto mt-6 w-full max-w-sm rounded-md border bg-transparent focus-within:border-blue-400 focus-within:ring focus-within:ring-blue-300 focus-within:ring-opacity-40 dark:border-gray-700 dark:focus-within:border-blue-300">
-          <%= form_tag(repositories_search_path, method: 'get' , class: "flex flex-col md:flex-row" ) do %>
-            <%= text_field_tag( :search_term, params[:search_term], placeholder: 'Enter to search for repository' ,
-              class: "m-1 h-10 flex-1 appearance-none border-none bg-transparent px-4 py-2 text-gray-700 placeholder-gray-400 focus:placeholder-transparent focus:outline-none focus:ring-0 dark:text-gray-200"
-              ) %>
-            <button type="submit"
-              class="m-1 h-10 transform rounded-md bg-blue-500 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-400 focus:bg-blue-400 focus:outline-none">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </button>
-          <% end %>
-        </div>
-    </div>
-  </header>
+  <%= render partial: 'header' %>
 
   <section class="mx-auto px-6 pb-28">
     <% if @error %>
